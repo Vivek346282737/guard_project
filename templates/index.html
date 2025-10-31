@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <title>GUARD — Password Risk</title>
+  <style>
+    body { font-family: Inter, Arial; background:#0b0f14; color:#e6edf3; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+    .card { background:#111827; padding:24px; border-radius:12px; width:420px; box-shadow:0 8px 24px rgba(0,0,0,0.4); }
+    input { width:100%; padding:10px; border-radius:8px; border:1px solid #374151; background:#0f172a; color:#e6edf3; }
+    button { margin-top:12px; width:100%; padding:10px; border-radius:8px; background:#16a34a; color:white; border:none; font-weight:600; }
+    .result { margin-top:16px; padding:12px; border-radius:8px; background:#0f172a; border:1px solid #374151; }
+    .label { font-weight:700; }
+    .bar { margin-top:10px; height:10px; background:#1f2937; border-radius:6px; overflow:hidden; }
+    .fill { height:100%; background:linear-gradient(90deg,#ef4444,#f59e0b,#10b981); width: {{ score or 0 }}%; transition: width .3s; }
+    .tips { margin-top:10px; font-size:14px; color:#cbd5e1; }
+    .weak { color:#ef4444; } .strong { color:#10b981; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>GUARD — Password Risk</h2>
+    <form method="post">
+      <input type="text" name="password" placeholder="Type a password…" required />
+      <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+      <div class="result">
+        <div class="label">Result:
+          <span class="{{ 'weak' if result=='Weak' else 'strong' }}">{{ result }}</span>
+          {% if score is not none %} (Score: {{ score }}/100){% endif %}
+        </div>
+        <div class="bar"><div class="fill"></div></div>
+        {% if suggestions and result == 'Weak' %}
+          <div class="tips">
+            <strong>Improve by:</strong>
+            <ul>
+              {% for tip in suggestions %}
+                <li>{{ tip }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
