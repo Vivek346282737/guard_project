@@ -28,7 +28,21 @@ It provides real‑time feedback to users and helps improve overall cybersecurit
 ---
 
 ## 📂 Project Structure
-guard_project/ │ ├── app.py # Flask main app ├── model/ # Trained ML model + scripts │ ├── data/ # Raw & cleaned datasets │ ├── utils/ # Helper functions │ ├── train_model.py # Training script │ ├── predict.py # Prediction script │ └── password_risk_model.py │ ├── templates/ # HTML templates │ └── index.html │ ├── static/ # CSS, JS, images ├── requirements.txt # Dependencies ├── README.md # Project documentation └── screenshots/ # App screenshots
+```plaintext
+guard_project/
+├── app.py                 # Flask main app
+├── model/                 # Trained ML model + scripts
+│   ├── data/              # Raw & cleaned datasets
+│   ├── utils/             # Helper functions
+│   ├── train_model.py     # Training script
+│   ├── predict.py         # Prediction script
+│   └── password_risk_model.py
+├── templates/             # HTML templates
+│   └── index.html
+├── static/                # CSS, JS, images
+├── requirements.txt       # Dependencies
+├── README.md              # Project documentation
+└── screenshots/           # App screenshots
 ---
 
 ## ⚙️ Installation & Setup
@@ -36,10 +50,39 @@ guard_project/ │ ├── app.py # Flask main app ├── model/ # Trained 
    ```bash
    git clone https://github.com/Vivek346282737/guard_project.git
    cd guard_project
-## 📸 Screenshots
+---
 
-### Weak Password Example
-![App Screenshot](screenshots/screenshot1.png)
+## 🖼️ Screenshots
+Here are some previews of the app in action:
 
-### Strong Password Example
-![App Screenshot](screenshots/screenshot2.png)
+### 🔑 Home Page
+![App Screenshot](screenshots/home.png)
+
+### 📊 Password Strength Analysis
+![Strength Bar](screenshots/strength_bar.png)
+
+### 🤖 Model Prediction
+![Prediction Result](screenshots/prediction.png)
+---
+
+## 🔮 Future Improvements / Roadmap
+- Add password suggestions for weak inputs  
+- Integrate advanced deep learning models  
+- Deploy on cloud (Heroku / AWS / Azure)  
+- Add user authentication & dashboard  
+- Improve UI with modern design frameworks  
+---
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!  
+Feel free to fork this repo and submit a pull request.
+---
+
+## 📜 License
+This project is licensed under the MIT License.
+---
+
+## 🙏 Acknowledgements
+- [Flask](https://flask.palletsprojects.com/) for the lightweight backend framework  
+- [Scikit‑learn](https://scikit-learn.org/) for machine learning utilities  
+- Open password datasets used for training and evaluation  
