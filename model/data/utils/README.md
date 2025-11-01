@@ -1,20 +1,45 @@
-# GUARD — Password Risk Analyzer 🔐
+# GUARD 🔐
+Password Risk Detection using Machine Learning
 
-## 🚀 Overview
-GUARD ek ML‑based password risk analyzer hai jo weak aur strong passwords detect karta hai aur user ko tips deta hai apna password strong banane ke liye.  
-Ye project mera portfolio flagship hai jisme Machine Learning + Flask web app dono combine kiye gaye hain.
+---
+
+## 🚀 Project Overview
+**GUARD** is a machine learning–powered web application that analyzes password strength and detects potential risks.  
+It provides real‑time feedback to users and helps improve overall cybersecurity hygiene.
+
+---
+
+## ✨ Features
+- 🔑 Password strength analysis (Weak, Medium, Strong)
+- 📊 Real‑time feedback with strength bar
+- 🤖 Machine learning model trained on password datasets
+- 🌐 Flask‑based web interface
+- 📱 Responsive UI for desktop and mobile
+
+---
+
+## 🛠️ Tech Stack
+- **Python 3**
+- **Flask** (backend)
+- **Scikit‑learn / ML model**
+- **HTML, CSS, JavaScript** (frontend)
+- **Git & GitHub** (version control)
+
+---
 
 ## 📂 Project Structure
-- **train_model.py** → Model train aur save karta hai  
-- **predict.py** → CLI me password check karne ka tool  
-- **app.py** → Flask web app run karta hai  
-- **templates/index.html** → Web UI (result, score bar, tips)  
-- **passwords.csv** → Dataset  
-- **requirements.txt** → Dependencies  
+guard_project/ │ ├── app.py # Flask main app ├── model/ # Trained ML model + scripts │ ├── data/ # Raw & cleaned datasets │ ├── utils/ # Helper functions │ ├── train_model.py # Training script │ ├── predict.py # Prediction script │ └── password_risk_model.py │ ├── templates/ # HTML templates │ └── index.html │ ├── static/ # CSS, JS, images ├── requirements.txt # Dependencies ├── README.md # Project documentation └── screenshots/ # App screenshots
+---
 
-## ⚙️ Setup & Run
-```bash
-pip install -r requirements.txt
-python train_model.py
-python predict.py
-python app.py
+## ⚙️ Installation & Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Vivek346282737/guard_project.git
+   cd guard_project
+## 📸 Screenshots
+
+### Weak Password Example
+![App Screenshot](screenshots/screenshot1.png)
+
+### Strong Password Example
+![App Screenshot](screenshots/screenshot2.png)
